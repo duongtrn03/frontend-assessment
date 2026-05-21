@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "subtitle": "Eyebrow",
+    "title": "Welcome Developer!",
+    "description": "Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection; your output should match the design specifications exactly in terms of colour, spacing, typography, and visual hierarchy.",
+    "buttons": [
+      {
+        "label": "Shop Now",
+        "url": "#"
+      },
+      {
+        "label": "Discover All",
+        "url": "#"
+      }
+    ],
+    "image_url": "/banners/banner_desktop.webp",
+    "image_mb_url": "/banners/banner_mobile.webp"
+  },
+  {
+    "id": 2,
+    "subtitle": "Summer Sale",
+    "title": "Up to 50% Off!",
+    "description": "Don't miss our biggest sale of the year. Shop hundreds of products at unbeatable prices across all categories.",
+    "buttons": [
+      {
+        "label": "Shop Sale",
+        "url": "#"
+      },
+      {
+        "label": "View All Deals",
+        "url": "#"
+      }
+    ],
+    "image_url": "/banners/banner_desktop.webp",
+    "image_mb_url": "/banners/banner_mobile.webp"
+  },
+  {
+    "id": 3,
+    "subtitle": "Featured Collection",
+    "title": "Modern Living Starts Here",
+    "description": "Explore our curated collection of home furniture and decor designed to elevate every room in your home.",
+    "buttons": [
+      {
+        "label": "Explore Now",
+        "url": "#"
+      },
+      {
+        "label": "Learn More",
+        "url": "#"
+      }
+    ],
+    "image_url": "/banners/banner_desktop.webp",
+    "image_mb_url": "/banners/banner_mobile.webp"
+  },
+  {
+    "id": 4,
+    "subtitle": "Limited Edition",
+    "title": "Exclusive Deals This Week",
+    "description": "Grab our limited edition products before they're gone. Handpicked items available for a limited time only.",
+    "buttons": [
+      {
+        "label": "Shop Now",
+        "url": "#"
+      },
+      {
+        "label": "See All",
+        "url": "#"
+      }
+    ],
+    "image_url": "/banners/banner_desktop.webp",
+    "image_mb_url": "/banners/banner_mobile.webp"
+  },
+  {
+    "id": 5,
+    "subtitle": "Free Shipping",
+    "title": "Free Delivery on Orders Over $50",
+    "description": "Enjoy free shipping on all orders above $50. Fast, reliable delivery straight to your door with real-time tracking.",
+    "buttons": [
+      {
+        "label": "Order Now",
+        "url": "#"
+      },
+      {
+        "label": "Discover All",
+        "url": "#"
+      }
+    ],
+    "image_url": "/banners/banner_desktop.webp",
+    "image_mb_url": "/banners/banner_mobile.webp"
+  }
+]

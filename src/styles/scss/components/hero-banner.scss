@@ -1,0 +1,27 @@
+.hero-banner {
+  .swiper-pagination {
+    bottom: 1rem !important;
+    @apply flex justify-center gap-1 lg:!bottom-5;
+  }
+
+  .swiper-pagination-bullet {
+    @apply h-2 w-2 rounded-full bg-white opacity-50;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply opacity-100;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: calc(50% - 15px) !important;
+    @apply z-10 px-2 py-[17px] text-white lg:!top-[50%] lg:py-[15px];
+  }
+
+  .swiper-button-prev {
+    @apply lg:ml-[13px];
+    margin-left: -7px !important;
+  }
+  .swiper-button-next {
+    @apply -mr-[7px] lg:mr-[13px];
+  }
+}

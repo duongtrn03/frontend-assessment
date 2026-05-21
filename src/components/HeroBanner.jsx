@@ -1,0 +1,65 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import BANNER_DATA from "../data/banner-data.json";
+
+export default function HeroBanner() {
+  return (
+    <section className="hero-banner relative">
+      <Swiper
+        modules={[Pagination, Autoplay, Navigation]}
+        navigation
+        pagination={{ clickable: true }}
+        loop
+      >
+        {BANNER_DATA.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <picture className="block max-h-[1080px] w-full">
+              <source media="(max-width: 1023px)" srcSet={item.image_mb_url} />
+              <source media="(min-width: 1024px)" srcSet={item.image_url} />
+              <img
+                className="hero-banner__img h-full w-full object-cover object-center"
+                src={item.image_url}
+                alt={item.title}
+                width={1920}
+                height={1080}
+                fetchPriority={index === 0 ? "high" : "low"}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </picture>
+            <div className="hero-banner__content absolute bottom-0 left-0 w-full bg-trans500 px-3 pb-10 pt-6 lg:px-6 lg:py-10">
+              <div className="grid grid-cols-1 gap-[10px] lg:grid-cols-3">
+                <div>
+                  <p className="hero-banner__subtitle mb-2 font-poppins text-[10px] font-semibold leading-[14px] tracking-normal text-white lg:font-arial lg:text-xs/[14px] lg:font-bold">
+                    {item.subtitle}
+                  </p>
+                  <h2 className="hero-banner__title mb-4 font-roboto text-4xl font-normal leading-[42px] tracking-normal text-white lg:font-arial lg:text-14 lg:leading-[64px]">
+                    {item.title}
+                  </h2>
+                  <p className="hero-banner__description mb-4 font-poppins text-[10px] font-normal leading-[15px] tracking-normal text-white lg:font-arial lg:text-xs lg:leading-[14px]">
+                    {item.description}
+                  </p>
+                  <div className="hero-banner__action space-x-2">
+                    {item.buttons.map((btn) => (
+                      <a
+                        key={btn.label}
+                        className="hero-banner__btn inline-block border px-6 py-[11px] font-arial text-[12px] font-bold leading-[18px] text-white transition-colors duration-200 ease-out hover:bg-white hover:text-black lg:text-xs lg:leading-[14px]"
+                        href={btn.url}
+                      >
+                        {btn.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+}
