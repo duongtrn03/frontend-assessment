@@ -4,14 +4,14 @@ export default function ProductItem({ product }) {
    * @param {number} price
    * @returns {string}
    */
-  function formatPrice(price) {
+  const formatPrice = (price) => {
     const n = Number(price);
     if (Number.isNaN(n)) return price ?? "";
     return `$${n.toFixed(2)}`;
-  }
+  };
 
   return (
-    <div className="product shadow-drop transition-all duration-200 ease-out hover:-translate-y-[10px] hover:shadow-drop-hover">
+    <div className="product shadow-drop-mobile transition-all duration-200 ease-out hover:shadow-drop-hover lg:shadow-drop lg:hover:-translate-y-[10px]">
       <a href={product.product_url} aria-label={product.heading}>
         <picture className="block w-full">
           <source media="(max-width: 1023px)" srcSet={product.image_mb_url} />

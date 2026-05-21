@@ -21,6 +21,7 @@ export default {
       },
       boxShadow: {
         drop: "0px 0px 16.1px 0px rgba(0, 0, 0, 0.5)",
+        "drop-mobile": "0px 0px 16.1px 0px rgba(0, 0, 0, 0.25)",
         "drop-hover": "0px 10px 24px 0px rgba(0, 0, 0, 0.7)",
       },
       keyframes: {

@@ -42,6 +42,7 @@
 
 - React 19
 - Vite 8
+- Node 24.12.0
 - TailwindCSS V3 / SCSS
 - React Router
 - Deployment: Netlify

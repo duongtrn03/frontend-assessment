@@ -5,7 +5,7 @@
   }
 
   .swiper-pagination-bullet {
-    @apply h-2 w-2 rounded-full bg-white opacity-50;
+    @apply h-2 w-2 rounded-full bg-white opacity-75;
   }
 
   .swiper-pagination-bullet-active {
@@ -18,8 +18,10 @@
   }
 
   .swiper-button-prev {
-    @apply lg:ml-[13px];
     margin-left: -7px !important;
+    @screen lg {
+      margin-left: 13px !important;
+    }
   }
   .swiper-button-next {
     @apply -mr-[7px] lg:mr-[13px];

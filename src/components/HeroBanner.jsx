@@ -13,6 +13,7 @@ export default function HeroBanner() {
         modules={[Pagination, Autoplay, Navigation]}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
       >
         {BANNER_DATA.map((item, index) => (
@@ -34,23 +35,29 @@ export default function HeroBanner() {
             <div className="hero-banner__content absolute bottom-0 left-0 w-full bg-trans500 px-3 pb-10 pt-6 lg:px-6 lg:py-10">
               <div className="grid grid-cols-1 gap-[10px] lg:grid-cols-3">
                 <div>
-                  <p className="hero-banner__subtitle mb-2 font-poppins text-[10px] font-semibold leading-[14px] tracking-normal text-white lg:font-arial lg:text-xs/[14px] lg:font-bold">
+                  <p className="hero-banner__subtitle mb-2 font-poppins text-[10px]/[15px] font-semibold tracking-normal text-white lg:font-arial lg:text-xs/[14px] lg:font-bold">
                     {item.subtitle}
                   </p>
-                  <h2 className="hero-banner__title mb-4 font-roboto text-4xl font-normal leading-[42px] tracking-normal text-white lg:font-arial lg:text-14 lg:leading-[64px]">
+                  <h2 className="hero-banner__title mb-4 font-roboto text-4xl/[42px] font-normal tracking-normal text-white lg:font-arial lg:text-14/[64px]">
                     {item.title}
                   </h2>
-                  <p className="hero-banner__description mb-4 font-poppins text-[10px] font-normal leading-[15px] tracking-normal text-white lg:font-arial lg:text-xs lg:leading-[14px]">
+                  <p className="hero-banner__description mb-4 font-poppins text-[10px]/[15px] font-normal tracking-normal text-white lg:font-arial lg:text-xs/[14px]">
                     {item.description}
                   </p>
                   <div className="hero-banner__action space-x-2">
-                    {item.buttons.map((btn) => (
+                    {item.buttons.map((btn, index) => (
                       <a
                         key={btn.label}
-                        className="hero-banner__btn inline-block border px-6 py-[11px] font-arial text-[12px] font-bold leading-[18px] text-white transition-colors duration-200 ease-out hover:bg-white hover:text-black lg:text-xs lg:leading-[14px]"
+                        className={`hero-banner__btn group inline-block border px-6 py-[11px] font-poppins text-[12px]/[18px] font-semibold tracking-[-0.2px] transition-all duration-200 ease-out lg:font-arial lg:text-xs/[14px] lg:font-bold ${
+                          index === 0
+                            ? "border-white bg-white text-black hover:border-white hover:bg-transparent hover:text-white"
+                            : "border-white bg-transparent text-white hover:border-transparent hover:bg-white hover:text-black"
+                        }`}
                         href={btn.url}
                       >
-                        {btn.label}
+                        <span className="inline-block transition-transform duration-200 ease-out group-hover:scale-110">
+                          {btn.label}
+                        </span>
                       </a>
                     ))}
                   </div>

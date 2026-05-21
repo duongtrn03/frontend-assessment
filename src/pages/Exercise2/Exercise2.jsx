@@ -3,9 +3,12 @@ import AccordionList from "../../components/AccordionList";
 import BackButton from "../../components/BackButton";
 import TabList from "../../components/TabList";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useState } from "react";
 
 export default function Excercise2() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <>
       <Helmet>
@@ -14,7 +17,14 @@ export default function Excercise2() {
       </Helmet>
       <div className="relative">
         <BackButton />
-        {isMobile ? <AccordionList /> : <TabList />}
+        {isMobile ? (
+          <AccordionList
+            selectedIndex={selectedIndex}
+            onSelect={setSelectedIndex}
+          />
+        ) : (
+          <TabList selectedIndex={selectedIndex} onSelect={setSelectedIndex} />
+        )}
       </div>
     </>
   );
