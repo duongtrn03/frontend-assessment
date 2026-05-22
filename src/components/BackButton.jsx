@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ArrowLeftIcon } from "./Icon";
 
 export default function BackButton() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function BackButton() {
       onClick={() => navigate("/")}
     >
       <span className="flex items-center gap-2">
-        <i className="fa-solid fa-arrow-left"></i>
+        <ArrowLeftIcon />
         Back
       </span>
     </button>

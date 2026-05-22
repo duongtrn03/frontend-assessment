@@ -1,4 +1,5 @@
 import DATA from "../data/data.json";
+import { MinusIcon, PlusIcon } from "./Icon";
 
 export default function AccordionList({ selectedIndex, onSelect }) {
   const handleSelectAccordion = (index) => {
@@ -24,12 +25,11 @@ export default function AccordionList({ selectedIndex, onSelect }) {
                     {item.title}
                   </h2>
                   <span className="self-center">
-                    <i
-                      className={
-                        "fa-solid" +
-                        (isActive ? " fa-minus text-green-olive" : " fa-plus")
-                      }
-                    />
+                    {isActive ? (
+                      <MinusIcon className="text-green-olive" />
+                    ) : (
+                      <PlusIcon />
+                    )}
                   </span>
                 </div>
                 <div

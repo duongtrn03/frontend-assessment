@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { ListIcon, WindowIcon } from "../../components/Icon";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function HomePage() {
               onClick={() => navigate("/exercise1")}
               className="rounded-xl bg-gray-900 px-8 py-3 text-sm font-semibold text-white transition hover:bg-gray-700 active:scale-95"
             >
-              <i className="fa-regular fa-window-maximize mr-2" />
+              <WindowIcon className="mr-2 inline-block" />
               Exercise 1
             </button>
 
@@ -36,7 +37,7 @@ export default function HomePage() {
               onClick={() => navigate("/exercise2")}
               className="rounded-xl border border-gray-300 bg-white px-8 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50 active:scale-95"
             >
-              <i className="fa-solid fa-list mr-2" />
+              <ListIcon className="mr-2 inline-block" />
               Exercise 2
             </button>
           </div>

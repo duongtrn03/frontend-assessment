@@ -29,7 +29,7 @@ export default function HeroBanner() {
                 height={1080}
                 fetchPriority={index === 0 ? "high" : "low"}
                 loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
+                decoding={index === 0 ? "sync" : "async"}
               />
             </picture>
             <div className="hero-banner__content absolute bottom-0 left-0 w-full bg-trans500 px-3 pb-10 pt-6 lg:px-6 lg:py-10">
