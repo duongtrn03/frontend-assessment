@@ -42,7 +42,7 @@
 
 - React 19
 - Vite 8
-- Node 24.12.0
+- Node 20+
 - TailwindCSS V3 / SCSS
 - React Router
 - Deployment: Netlify
@@ -117,7 +117,7 @@ http://localhost:4173
 
 This project is deployed on **Netlify** with automatic CI/CD.
 
-Every push to the `main` branch triggers an automatic re-deployment.
+Every push to the `master` branch triggers an automatic re-deployment.
 
 🔗 Live: https://fascinating-tiramisu-87baa5.netlify.app/
 
@@ -133,4 +133,4 @@ Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
 - So: 'ba' + NAN + a = "baNANa"
 
-- Finaly: "banana".toLowerCase() => "banana"
+- Finaly: "baNANa".toLowerCase() => "banana"

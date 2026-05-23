@@ -3,7 +3,7 @@ import { MinusIcon, PlusIcon } from "./Icon";
 
 export default function AccordionList({ selectedIndex, onSelect }) {
   const handleSelectAccordion = (index) => {
-    onSelect((prev) => (prev === index ? null : index));
+    onSelect(selectedIndex === index ? null : index);
   };
 
   return (

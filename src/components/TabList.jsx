@@ -1,6 +1,7 @@
 import DATA from "../data/data.json";
 export default function TabList({ selectedIndex, onSelect }) {
   const safeIndex = selectedIndex ?? 0;
+
   return (
     <div className="tab-wrapper flex h-screen justify-center bg-green-matcha">
       <div className="tab-box fixed top-20 max-w-[700px] rounded-3xl bg-white p-[30px] shadow-lg">
@@ -12,7 +13,6 @@ export default function TabList({ selectedIndex, onSelect }) {
                   className={`px-6 py-4 font-poppins font-semibold text-gray-light ${safeIndex === index ? "text-green-olive" : ""}`}
                   aria-current="page"
                   onClick={() => onSelect(index)}
-                  href="#"
                 >
                   {item.title}
                 </button>

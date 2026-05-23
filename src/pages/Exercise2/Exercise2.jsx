@@ -8,6 +8,27 @@ import { useState } from "react";
 export default function Excercise2() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [accordionCollapsed, setAccordionCollapsed] = useState(false);
+  const safeIndex = accordionCollapsed ? 0 : selectedIndex;
+
+  if (!isMobile && accordionCollapsed) {
+    setAccordionCollapsed(false);
+    setSelectedIndex(0);
+  }
+
+  const handleAccordionSelect = (index) => {
+    if (index === null) {
+      setAccordionCollapsed(true);
+      setSelectedIndex(0);
+    } else {
+      setAccordionCollapsed(false);
+      setSelectedIndex(index);
+    }
+  };
+
+  const handleTabSelect = (index) => {
+    setSelectedIndex(index);
+  };
 
   return (
     <>
@@ -19,11 +40,15 @@ export default function Excercise2() {
         <BackButton />
         {isMobile ? (
           <AccordionList
-            selectedIndex={selectedIndex}
-            onSelect={setSelectedIndex}
+            selectedIndex={accordionCollapsed ? null : selectedIndex}
+            onSelect={handleAccordionSelect}
           />
         ) : (
-          <TabList selectedIndex={selectedIndex} onSelect={setSelectedIndex} />
+          <TabList
+            accordionCollapsed={accordionCollapsed}
+            selectedIndex={safeIndex}
+            onSelect={handleTabSelect}
+          />
         )}
       </div>
     </>
