@@ -10,7 +10,7 @@
 
 ## 🚀 Demo
 
-🔗 Live Demo: https://fascinating-tiramisu-87baa5.netlify.app/
+🔗 Live Demo: https://frontend-assessment.duongtd273.workers.dev/
 
 ## 🛒 Excercise 1
 
@@ -22,7 +22,7 @@
   - HeroBanner
   - ProductCollection
 
-🔗 Live Demo Excercise 1: https://fascinating-tiramisu-87baa5.netlify.app/exercise1
+🔗 Live Demo Excercise 1: https://frontend-assessment.duongtd273.workers.dev/exercise1
 
 ## 📑 Excercise 2
 
@@ -36,7 +36,7 @@
   - AccordionList
   - TabList
 
-🔗 Live Demo Excercise 2: https://fascinating-tiramisu-87baa5.netlify.app/exercise2
+🔗 Live Demo Excercise 2: https://frontend-assessment.duongtd273.workers.dev/exercise2
 
 ## 🛠️ Technologies Used
 
@@ -45,7 +45,7 @@
 - Node 20+
 - TailwindCSS V3 / SCSS
 - React Router
-- Deployment: Netlify
+- Deployment: Cloudflare Workers
 
 ## 📂 Project Structure
 
@@ -115,11 +115,11 @@ http://localhost:4173
 
 ## 📦 Deployment
 
-This project is deployed on **Netlify** with automatic CI/CD.
+This project is deployed on **Cloudflare Workers** with automatic CI/CD.
 
 Every push to the `master` branch triggers an automatic re-deployment.
 
-🔗 Live: https://fascinating-tiramisu-87baa5.netlify.app/
+🔗 Live: https://frontend-assessment.duongtd273.workers.dev/
 
 ## 🧨 Bonus points
 
