@@ -35,20 +35,20 @@ export default function HeroBanner() {
             <div className="hero-banner__content absolute bottom-0 left-0 w-full bg-trans500 px-3 pb-10 pt-6 lg:px-6 lg:py-10">
               <div className="grid grid-cols-1 gap-[10px] lg:grid-cols-3">
                 <div>
-                  <p className="hero-banner__subtitle mb-2 font-poppins text-[10px]/[15px] font-semibold tracking-normal text-white lg:font-arial lg:text-xs/[14px] lg:font-bold">
+                  <p className="hero-banner__subtitle typo-body-emphasis mb-2 tracking-normal text-white">
                     {item.subtitle}
                   </p>
-                  <h2 className="hero-banner__title mb-4 font-roboto text-4xl/[42px] font-normal tracking-normal text-white lg:font-arial lg:text-14/[64px]">
+                  <h2 className="hero-banner__title typo-hero-title mb-4 tracking-normal text-white">
                     {item.title}
                   </h2>
-                  <p className="hero-banner__description mb-4 font-poppins text-[10px]/[15px] font-normal tracking-normal text-white lg:font-arial lg:text-xs/[14px]">
+                  <p className="hero-banner__description typo-body mb-4 tracking-normal text-white">
                     {item.description}
                   </p>
                   <div className="hero-banner__action space-x-2">
                     {item.buttons.map((btn, index) => (
                       <a
                         key={btn.label}
-                        className={`hero-banner__btn group inline-block border px-6 py-[11px] font-poppins text-[12px]/[18px] font-semibold tracking-[-0.2px] transition-all duration-200 ease-out lg:font-arial lg:text-xs/[14px] lg:font-bold ${
+                        className={`hero-banner__btn typo-btn group inline-block border px-6 py-[11px] tracking-[-0.2px] transition-all duration-200 ease-out ${
                           index === 0
                             ? "border-white bg-white text-black hover:border-white hover:bg-transparent hover:text-white"
                             : "border-white bg-transparent text-white hover:border-transparent hover:bg-white hover:text-black"

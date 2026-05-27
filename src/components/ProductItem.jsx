@@ -27,18 +27,18 @@ export default function ProductItem({ product }) {
           />
         </picture>
         <div className="product__information bg-green-light px-2 py-2 text-left lg:px-3">
-          <p className="product__brand-name mb-1 font-poppins text-[10px]/[15px] font-medium text-white-muted lg:font-arial lg:text-xs/[14px] lg:font-normal">
+          <p className="product__brand-name typo-body-medium mb-1 text-white-muted">
             {product.brand_name}
           </p>
           <div className="flex w-full flex-col items-start justify-between gap-y-1 lg:flex-row">
-            <p className="product__heading font-poppins text-[10px]/[15px] font-normal text-white-muted lg:font-arial lg:text-xs/[14px]">
+            <h3 className="product__heading typo-body text-white-muted">
               {product.heading}
-            </p>
+            </h3>
             <div className="flex flex-row gap-2 self-start">
-              <span className="product__sale-price font-poppins text-[10px]/[15px] font-normal text-white-muted lg:font-arial lg:text-xs/[14px]">
+              <span className="product__sale-price typo-body text-white-muted">
                 {formatPrice(product.sale_price)}
               </span>
-              <span className="product__original-price font-poppins text-[10px]/[15px] font-normal text-gray-light line-through lg:font-arial lg:text-xs/[14px]">
+              <span className="product__original-price typo-body text-gray-light line-through">
                 {formatPrice(product.original_price)}
               </span>
             </div>

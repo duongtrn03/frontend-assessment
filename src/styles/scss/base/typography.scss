@@ -1,0 +1,33 @@
+.typo-body {
+  @apply font-poppins text-[10px]/[15px] font-normal;
+  @apply lg:font-arial lg:text-xs/[14px];
+}
+
+.typo-body-medium {
+  @apply font-poppins text-[10px]/[15px] font-medium;
+  @apply lg:font-arial lg:text-xs/[14px] lg:font-normal;
+}
+
+.typo-body-emphasis {
+  @apply font-poppins text-[10px]/[15px] font-semibold;
+  @apply lg:font-arial lg:text-xs/[14px] lg:font-bold;
+}
+
+.typo-btn {
+  @apply font-poppins text-[12px]/[18px] font-semibold;
+  @apply lg:font-arial lg:text-xs/[14px] lg:font-bold;
+}
+
+.typo-hero-title {
+  @apply font-roboto text-4xl/[42px] font-normal;
+  @apply lg:font-arial lg:text-14/[64px];
+}
+
+.typo-section-title {
+  @apply font-roboto text-[32px]/[38px] tracking-normal;
+  @apply lg:font-arial lg:text-5xl/[55px];
+}
+
+.typo-label {
+  @apply font-poppins font-semibold;
+}

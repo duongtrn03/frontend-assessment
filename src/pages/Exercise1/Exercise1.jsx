@@ -3,7 +3,7 @@ import BackButton from "../../components/BackButton";
 import HeroBanner from "../../components/HeroBanner";
 import ProductCollection from "../../components/ProductCollection";
 
-export default function Excercise1() {
+export default function Exercise1() {
   return (
     <>
       <Helmet>

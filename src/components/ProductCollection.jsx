@@ -3,7 +3,7 @@ import ProductItem from "./ProductItem";
 export default function ProductCollection() {
   return (
     <section className="product-collection px-3 py-8 text-center lg:px-6 lg:py-[64px]">
-      <h2 className="product-collection__title mb-6 w-full font-roboto text-[32px]/[38px] tracking-normal lg:mb-[48px] lg:font-arial lg:text-5xl/[55px]">
+      <h2 className="product-collection__title typo-section-title mb-6 w-full lg:mb-[48px]">
         Heading
       </h2>
       <div className="grid grid-cols-2 gap-x-1 gap-y-2 lg:grid-cols-4 lg:gap-4">
